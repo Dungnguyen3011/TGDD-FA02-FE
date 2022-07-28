@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "types": ["vite/client"],
+    "types": ["vite/client", "reflect-metadata", "jest"],
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": false,
@@ -14,17 +14,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "baseUrl": "./",
-    "paths": {
-      "#/generated/*": ["src/generated/*"],
-      "#/shared/*": ["src/shared/*"],
-      "#/pages/*": ["src/pages/*"],
-      "#/configs/*": ["src/configs/*"],
-      "#/assets/*": ["src/assets/*"],
-      "#/src/*": ["./src/*"]
-    }
+    "jsx": "react-jsx"
   },
-  "include": ["./src", "tailwind.config.js", "./__tests__"],
+  "include": ["./src", "tailwind.config.js", "./__tests__", "**/*.spec.ts"],
   "exclude": ["node_modules", "build", "./__tests__/e2e"]
 }
